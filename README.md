@@ -171,7 +171,7 @@ See attached screenshots for specific setup:-
 
 #### An example of the summary run output...
 
-![Azure](/public/Azure.PNG)
+![Azure](/public/Azure.png)
 
 ---
 
