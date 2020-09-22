@@ -168,7 +168,7 @@ Step 1, create a Task Group:-
 Step 2, add a task within the Task Group to install Newman
 ![Azure](/public/AzureTask1InstallNewman.png)
 
-Step 3, add a task within the Task Group to execute a postman collection via the Postman API (through a Newman call) and (optionally) generate a report
+Step 3, add a task within the Task Group to execute a postman collection via the Postman API through a Newman call and (optionally) generate a report.  NOTE: for security reasons the collection/environment URLS have been amended and do not refer to tests included in this repo.
 ![Azure](/public/AzureTask2RunTests.png)
 
 newman run "https://api.getpostman.com/collections/<<Postman API Collection URL>>" \
