@@ -162,12 +162,22 @@ A sample Gitlab project can be found here: https://gitlab.com/DannyDainton/postm
 
 All the magic happens in the pipeline task group, which you can configure to contain several tasks in order to setup, run and report.
 
-See attached screenshots for specific setup:-
-![Azure](/public/AzureTaskGroup.png), ![Azure](/public/AzureTask1InstallNewman.png), ![Azure](/public/AzureTask2RunTests.png), ![Azure](/public/AzureTask3ReportOptional.png)
+Step 1, create a Task Group:-
+![Azure](/public/AzureTaskGroup.png)
 
-```newman run "https://api.getpostman.com/collections/<<Postman API Collection URL>>" \
+Step 2, add a task within the Task Group to install Newman
+![Azure](/public/AzureTask1InstallNewman.png)
+
+Step 3, add a task within the Task Group to execute a postman collection via the Postman API (through a Newman call) and (optionally) generate a report
+![Azure](/public/AzureTask2RunTests.png)
+
+newman run "https://api.getpostman.com/collections/<<Postman API Collection URL>>" \
     -e "<<Postman API Environment URL>>" -r cli,junitfull --reporter-junitfull-export JUnitReport.xml
-```
+
+Step4 (optional), add a task within the Task Group to publish a report 
+
+![Azure](/public/AzureTask3ReportOptional.png)
+
 
 #### An example of the summary run output...
 
